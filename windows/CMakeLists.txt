@@ -13,11 +13,7 @@ if(NOT NUGET_EXE)
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/nuget.exe
-          install "Microsoft.Windows.CppWinRT"
-          -Version 2.0.210503.1
-          -ExcludeVersion
-          -OutputDirectory ${CMAKE_BINARY_DIR}/packages
+  COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/nuget.exe install -OutputDirectory ${CMAKE_CURRENT_SOURCE_DIR}/packages Microsoft.Windows.CppWinRT -Version 2.0.210312.4
 )
 ################ NuGet install end ################
 
